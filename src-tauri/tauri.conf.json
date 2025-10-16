@@ -13,10 +13,9 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "apple-music-wa",
-        "width": 800,
-        "height": 600,
-        "url": "https://music.apple.com"
+        "title": "Apple Music",
+        "width": 1200,
+        "height": 800
       }
     ],
     "security": {
