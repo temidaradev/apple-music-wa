@@ -15,9 +15,8 @@ pub fn run() {
                 if let Some(window) = app.get_webview_window("main") {
                     let _ = window.with_webview(|webview| {
                         #[cfg(target_os = "linux")]
-                        unsafe {
-                            use webkit2gtk::WebView;
-                            let webview = &*(webview as *const _ as *const WebView);
+                        {
+                            use webkit2gtk::WebViewExt;
 
                             if let Some(settings) = webview.settings() {
                                 settings.set_enable_encrypted_media(true);
