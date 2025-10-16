@@ -4,22 +4,25 @@
   "version": "0.1.0",
   "identifier": "com.temidaradev.apple-music-wa",
   "build": {
-    "beforeDevCommand": "trunk serve",
-    "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "trunk build",
-    "frontendDist": "../dist"
+    "beforeDevCommand": "echo 'Skipping frontend build'",
+    "devUrl": "https://music.apple.com",
+    "beforeBuildCommand": "echo 'Skipping frontend build'",
+    "frontendDist": "https://music.apple.com"
   },
   "app": {
-    "withGlobalTauri": true,
+    "withGlobalTauri": false,
     "windows": [
       {
         "title": "Apple Music",
         "width": 1200,
-        "height": 800
+        "height": 800,
+        "url": "https://music.apple.com",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "dangerousDisableAssetCspModification": true
     }
   },
   "bundle": {
