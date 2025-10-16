@@ -11,7 +11,14 @@ This is a lightweight desktop wrapper for Apple Music's web interface, providing
 ### Arch Linux / Manjaro
 
 ```bash
-sudo pacman -S webkit2gtk base-devel curl wget file openssl appmenu-gtk-module gtk3 libappindicator-gtk3 librsvg libvips
+# Install required dependencies including DRM support
+sudo pacman -S webkit2gtk base-devel curl wget file openssl appmenu-gtk-module gtk3 libappindicator-gtk3 librsvg libvips gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav
+```
+
+**Important for DRM/Audio Quality:** Install GStreamer plugins for full codec support and DRM (required for Apple Music protected content):
+
+```bash
+sudo pacman -S gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav
 ```
 
 ### Ubuntu / Debian

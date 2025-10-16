@@ -23,7 +23,8 @@
     "security": {
       "csp": null,
       "dangerousDisableAssetCspModification": true
-    }
+    },
+    "enableGTKAppId": true
   },
   "bundle": {
     "active": true,
