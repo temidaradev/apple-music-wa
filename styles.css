@@ -8,8 +8,14 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: fixed;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }
