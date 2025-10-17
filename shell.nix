@@ -25,5 +25,8 @@ pkgs.mkShell {
     webkitgtk_4_1
     openssl
   ];
-  # shellHook = "";
+
+  shellHook = ''
+    export GIO_MODULE_DIR="${pkgs.glib-networking}/lib/gio/modules/"
+  '';
 }
